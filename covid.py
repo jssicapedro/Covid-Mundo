@@ -28,3 +28,4 @@ fig = px.line(dfshow, x=dfshow.index, y='num_sequences') # cria uma um gráfico 
 fig.update_traces(line=dict(color='red')) # altera a cor das linhas
 fig.update_layout(title='COVID-19', yaxis_title='N.ºs de casos', xaxis_title='Data') # titulo do gráfico/figura
 st.plotly_chart(fig, use_container_width=True) # diz para o streamlit mostrar o grafico (variavel fig) 
+

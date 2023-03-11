@@ -25,5 +25,6 @@ else:
 dfshow = df.groupby(by = ['date']).sum() # soma todas as informações de todos os pais de um dia
 
 fig = px.line(dfshow, x=dfshow.index, y='num_sequences') # cria uma um gráfico do tipo linha baseada nos dados da variavel dfshow onde o x é o indice (que será a data) e o y é  acoluna num_sequences presente no ficheiro csv
-fig.update_layout(title='COVID-19', xaxis_title='Casos', yaxis_title='Data') # titulo do gráfico/figura
+fig.update_traces(line=dict(color='red')) # altera a cor das linhas
+fig.update_layout(title='COVID-19', yaxis_title='N.ºs de casos', xaxis_title='Data') # titulo do gráfico/figura
 st.plotly_chart(fig, use_container_width=True) # diz para o streamlit mostrar o grafico (variavel fig) 
